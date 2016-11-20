@@ -1,0 +1,19 @@
+<nav class="navbar navbar-full navbar-fixed-top navbar-dark bg-inverse">
+
+    <a class="navbar-brand navbar-toggler" href="#" (click)="start.toggle()"></a>
+
+    <a class="navbar-brand" href="#">AHC Video Library</a>
+
+    <form class="form-inline float-lg-right">
+        <input class="form-control" type="text" placeholder="Search">
+        <button class="btn btn-outline-secondary" type="submit">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+    </form>
+</nav>
+
+<md-sidenav #start [opened]="false" class="navbar navbar-full navbar-dark bg-inverse">
+
+    <app-sidebar></app-sidebar>
+
+</md-sidenav>

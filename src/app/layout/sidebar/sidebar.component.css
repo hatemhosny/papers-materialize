@@ -1,0 +1,15 @@
+.sidenav ul,
+.sidenav li {
+    list-style-type: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.sidenav li a {
+    color: whitesmoke;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+}
