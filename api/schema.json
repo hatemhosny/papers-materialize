@@ -1,0 +1,64 @@
+{
+    "type": "object",
+    "properties": {
+
+        "lectures": {
+            "type": "array",
+            "minItems": 10,
+            "maxItems": 20,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "number",
+                        "faker": "random.number"
+                    },
+                    "presenter": {
+                        "type": "string",
+                        "faker": "name.findName"
+                    },
+                    "title": {
+                        "type": "string",
+                        "faker": "lorem.sentence"
+                    },
+                    "description": {
+                        "type": "string",
+                        "faker": "lorem.paragraph"
+                    },
+                    "series": {
+                        "type": "string",
+                        "faker": "lorem.words"
+                    },
+                    "email": {
+                        "type": "string",
+                        "faker": "internet.email"
+                    },
+                    "url": {
+                        "type": "string",
+                        "faker": "internet.url"
+                    },
+                    "datePublished": {
+                        "type": "string",
+                        "faker": "date.past"
+                    },
+                    "imageUrl": {
+                        "type": "string",
+                        "faker": "image.imageUrl"
+                    }
+                },
+                "required": [
+                    "id",
+                    "presenter",
+                    "title",
+                    "email",
+                    "description",
+                    "series",
+                    "url",
+                    "datePublished",
+                    "imageUrl"
+                ]
+            }
+        }
+    },
+    "required": ["lectures"]
+}
