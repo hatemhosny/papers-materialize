@@ -1,6 +1,5 @@
 md-sidenav-layout {
     min-height: 800px;
-    position: relative;
 }
 
 md-sidenav {
@@ -32,4 +31,9 @@ md-sidenav {
 
 .sidenav i {
     margin-right: 10px;
+}
+
+.footer {
+    color: whitesmoke;
+    text-align: center;
 }
