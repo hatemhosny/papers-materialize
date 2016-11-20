@@ -1,1 +1,35 @@
+md-sidenav-layout {
+    min-height: 800px;
+    position: relative;
+}
 
+md-sidenav {
+    width: 200px;
+    position: fixed !important;
+    top: 0;
+    margin-top: 50px;
+}
+
+.navbar-toggler {
+    cursor: pointer;
+}
+
+.sidenav ul,
+.sidenav li {
+    list-style-type: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.sidenav li a {
+    color: whitesmoke;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+}
+
+.sidenav i {
+    margin-right: 10px;
+}
