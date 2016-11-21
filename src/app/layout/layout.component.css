@@ -1,12 +1,6 @@
-md-sidenav-layout {
-    min-height: 800px;
-}
-
-md-sidenav {
-    width: 200px;
-    position: fixed !important;
-    top: 0;
-    margin-top: 50px;
+.header {
+    z-index: 999999999;
+    height: 60px;
 }
 
 .navbar-toggler {
@@ -17,6 +11,7 @@ md-sidenav {
 .sidenav li {
     list-style-type: none;
     display: block;
+    width: 200px;
     margin: 0;
     padding: 0;
 }
@@ -33,7 +28,20 @@ md-sidenav {
     margin-right: 10px;
 }
 
+.sidenav {
+    margin-top: 60px;
+}
+
 .footer {
     color: whitesmoke;
     text-align: center;
+}
+
+.content {
+    min-height: calc(100vh - 120px);
+    margin-bottom: 0;
+}
+
+.footer {
+    height: 50px;
 }

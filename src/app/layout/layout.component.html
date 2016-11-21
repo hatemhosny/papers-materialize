@@ -1,6 +1,6 @@
-<nav class="navbar navbar-full navbar-fixed-top navbar-dark bg-inverse">
+<nav class="header navbar navbar-full navbar-fixed-top navbar-dark bg-inverse">
 
-    <a class="navbar-brand navbar-toggler" (click)="sidenav.toggle()"></a>
+    <a class="navbar-brand navbar-toggler" (click)="_toggleSidebar()"></a>
 
     <a class="navbar-brand" href="#">AHC Video Library</a>
 
@@ -16,62 +16,60 @@
 
 
 
-<md-sidenav-layout>
 
-    <md-sidenav #sidenav [opened]="false" class="navbar navbar-full navbar-dark bg-inverse">
+<ng2-sidebar [(open)]="_open" closeOnClickOutside="true" defaultStyles="true" autoFocus="false" sidebarClass="navbar navbar-full navbar-dark bg-inverse">
 
-        <div class="sidenav">
-            <ul>
-                <li>
-                    <a [routerLink]="['']" (click)="sidenav.close()">
-                        <i class="fa fa-home" aria-hidden="true"></i>Home
-                    </a>
-                </li>
-                <li>
-                    <a [routerLink]="['lectures']" (click)="sidenav.close()">
-                        <i class="fa fa-video-camera" aria-hidden="true"></i>Lectures</a>
-                </li>
-                <li>
-                    <a [routerLink]="['presenters']" (click)="sidenav.close()">
-                        <i class="fa fa-group" aria-hidden="true"></i>Presenters</a>
-                </li>
-                <li>
-                    <a [routerLink]="['series']" (click)="sidenav.close()">
-                        <i class="fa fa-tags" aria-hidden="true"></i>Series</a>
-                </li>
-                <li>
-                    <a [routerLink]="['history']" (click)="sidenav.close()">
-                        <i class="fa fa-history" aria-hidden="true"></i>History</a>
-                </li>
-                <li>
-                    <a [routerLink]="['bookmarks']" (click)="sidenav.close()">
-                        <i class="fa fa-bookmark" aria-hidden="true"></i>Bookmarks</a>
-                </li>
-                <li>
-                    <a [routerLink]="['search']" (click)="sidenav.close()">
-                        <i class="fa fa-search" aria-hidden="true"></i>Search</a>
-                </li>
-                <li>
-                    <a [routerLink]="['account']" (click)="sidenav.close()">
-                        <i class="fa fa-user" aria-hidden="true"></i>Account</a>
-                </li>
-                <li>
-                    <a [routerLink]="['about']" (click)="sidenav.close()">
-                        <i class="fa fa-info-circle" aria-hidden="true"></i>About</a>
-                </li>
-            </ul>
+    <div class="sidenav">
+        <ul>
+            <li>
+                <a [routerLink]="['']" (click)="sidenav.close()">
+                    <i class="fa fa-home" aria-hidden="true"></i>Home
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="['lectures']" (click)="sidenav.close()">
+                    <i class="fa fa-video-camera" aria-hidden="true"></i>Lectures</a>
+            </li>
+            <li>
+                <a [routerLink]="['presenters']" (click)="sidenav.close()">
+                    <i class="fa fa-group" aria-hidden="true"></i>Presenters</a>
+            </li>
+            <li>
+                <a [routerLink]="['series']" (click)="sidenav.close()">
+                    <i class="fa fa-tags" aria-hidden="true"></i>Series</a>
+            </li>
+            <li>
+                <a [routerLink]="['history']" (click)="sidenav.close()">
+                    <i class="fa fa-history" aria-hidden="true"></i>History</a>
+            </li>
+            <li>
+                <a [routerLink]="['bookmarks']" (click)="sidenav.close()">
+                    <i class="fa fa-bookmark" aria-hidden="true"></i>Bookmarks</a>
+            </li>
+            <li>
+                <a [routerLink]="['search']" (click)="sidenav.close()">
+                    <i class="fa fa-search" aria-hidden="true"></i>Search</a>
+            </li>
+            <li>
+                <a [routerLink]="['account']" (click)="sidenav.close()">
+                    <i class="fa fa-user" aria-hidden="true"></i>Account</a>
+            </li>
+            <li>
+                <a [routerLink]="['about']" (click)="sidenav.close()">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i>About</a>
+            </li>
+        </ul>
 
-        </div>
+    </div>
 
-    </md-sidenav>
+</ng2-sidebar>
 
-
+<div class="content">
     <app-content></app-content>
+</div>
 
-</md-sidenav-layout>
+<nav class="footer navbar navbar-full navbar-dark bg-inverse">
 
-<nav class="navbar navbar-full navbar-dark bg-inverse">
-
-    <div class="footer">Aswan Heart Centre</div>
+    <div>Aswan Heart Centre</div>
 
 </nav>

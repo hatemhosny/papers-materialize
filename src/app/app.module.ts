@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
+import { SidebarModule } from 'ng2-sidebar';
 
 import { AppComponent } from './app.component';
 import { LectureListComponent } from './lectures/lecture-list/lecture-list.component';
@@ -35,6 +36,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BrowserModule,
     FormsModule,
     HttpModule,
+    SidebarModule,
     MaterialModule.forRoot(),
     RouterModule.forRoot([
      { path: 'home', component: HomeComponent },
