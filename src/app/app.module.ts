@@ -17,6 +17,7 @@ import { LectureItemComponent } from './lectures/lecture-item/lecture-item.compo
 import { LectureDetailsComponent } from './lectures/lecture-details/lecture-details.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     LectureItemComponent,
     LectureDetailsComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
