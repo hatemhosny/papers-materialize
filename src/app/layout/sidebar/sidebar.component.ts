@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  private _open: boolean = true;
+  private _open: boolean = false;
 
   constructor() { }
 
