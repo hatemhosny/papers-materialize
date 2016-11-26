@@ -14,7 +14,7 @@
 
         "prebuild:gh-pages": "npm run lint",
         "build:gh-pages": "ng build --prod --base-href /ng2-material/",
-        "postbuild:gh-pages": "copy .\\src\\index.html .\\dist\\404.html",
+        "postbuild:gh-pages": "copy .\\dist\\index.html .\\dist\\404.html",
 
         "preserve:prod": "npm run lint",
         "serve:prod": "ng serve --prod",
