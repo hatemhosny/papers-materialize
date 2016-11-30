@@ -9,8 +9,12 @@
 
         "prebuild": "npm run lint",
         "build": "ng build",
+
         "prebuild:prod": "npm run lint",
         "build:prod": "ng build --prod",
+
+        "prebuild:stag": "npm run lint",
+        "build:stag": "ng build --environment=stag",
 
         "prebuild:gh-pages": "npm run lint",
         "build:gh-pages": "ng build --prod --base-href /ng2-material/",
@@ -18,6 +22,9 @@
 
         "preserve:prod": "npm run lint",
         "serve:prod": "ng serve --prod",
+
+        "preserve:stag": "npm run lint",
+        "serve:stag": "ng serve --environment=stag",
 
         "github-pages": "git subtree push --prefix dist origin gh-pages",
         "deploy": "npm-run-all build:gh-pages github-pages",
