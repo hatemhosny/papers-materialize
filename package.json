@@ -9,13 +9,15 @@
         "build": "npm-run-all lint ng:build docs",
         "build:prod": "npm-run-all lint ng:build:prod docs",
         "build:stag": "npm-run-all lint ng:build:stag docs",
-        "build:gh-pages": "npm-run-all lint ng:build:gh-pages gh-pages:404 docs",
+        "build:gh-pages": "npm-run-all lint ng:build:gh-pages gh-pages:404 git:add git:commit docs",
 
 
         "ng:build:gh-pages": "ng build --prod --base-href /ng2-material/",
         "gh-pages:404": "copy .\\dist\\index.html .\\dist\\404.html",
+        "git:add": "git add .",
+        "git:commit": "git commit -m github-deploy",
         "push:gh-pages": "git subtree push --prefix dist origin gh-pages",
-        "deploy:gh-pages": "npm-run-all build:gh-pages github-pages",
+        "deploy:gh-pages": "npm-run-all build:gh-pages push:gh-pages",
 
         "ng:serve": "ng serve",
         "ng:serve:prod": "ng serve --prod",
