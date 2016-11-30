@@ -4,33 +4,39 @@
     "license": "MIT",
     "angular-cli": {},
     "scripts": {
-        "prestart": "npm run lint",
-        "start": "ng serve",
-        "prebuild": "npm run lint",
-        "build": "ng build",
-        "postbuild": "npm run docs",
-        "prebuild:prod": "npm run lint",
-        "build:prod": "ng build --prod",
-        "prebuild:stag": "npm run lint",
-        "build:stag": "ng build --environment=stag",
-        "prebuild:gh-pages": "npm run lint",
-        "build:gh-pages": "ng build --prod --base-href /ng2-material/",
-        "postbuild:gh-pages": "copy .\\dist\\index.html .\\dist\\404.html",
-        "serve": "ng serve",
-        "preserve:prod": "npm run lint",
-        "serve:prod": "ng serve --prod",
-        "preserve:stag": "npm run lint",
-        "serve:stag": "ng serve --environment=stag",
-        "github-pages": "git subtree push --prefix dist origin gh-pages",
-        "deploy": "npm-run-all build:gh-pages github-pages",
+        "start": "npm-run-all lint ng:serve",
+
+        "build": "npm-run-all lint ng:build docs",
+        "build:prod": "npm-run-all lint ng:build:prod docs",
+        "build:stag": "npm-run-all lint ng:build:stag docs",
+        "build:gh-pages": "npm-run-all lint ng:build:gh-pages gh-pages:404 docs",
+
+
+        "ng:build:gh-pages": "ng build --prod --base-href /ng2-material/",
+        "gh-pages:404": "copy .\\dist\\index.html .\\dist\\404.html",
+        "push:gh-pages": "git subtree push --prefix dist origin gh-pages",
+        "deploy:gh-pages": "npm-run-all build:gh-pages github-pages",
+
+        "ng:serve": "ng serve",
+        "ng:serve:prod": "ng serve --prod",
+        "ng:serve:stag": "ng serve --environment=stag",
+
+        "ng:build": "ng build",
+        "ng:build:prod": "ng build --prod",
+        "ng:build:stag": "ng build --environment=stag",
+
         "localtunnel": "lt --port 4200 --subdomain ahclibrary",
         "share": "npm-run-all --parallel serve:prod localtunnel",
+
         "lint": "tslint \"src/**/*.ts\"",
         "test": "ng test",
         "pree2e": "webdriver-manager update",
         "e2e": "protractor",
-        "jsf": "generate-json api/schema.json api/db.json",
-        "api": "json-server --watch api/db.json",
+
+        "api": "npm-run-all json-schema-faker json-server",
+        "json-schema-faker": "generate-json api/schema.json api/db.json",
+        "json-server": "json-server --watch api/db.json",
+
         "docs": "npm run compodoc",
         "compodoc": "./node_modules/.bin/compodoc -p src/tsconfig.json -d docs -s"
     },
