@@ -38,7 +38,9 @@
         "json-server": "json-server --watch api/db.json",
 
         "docs": "npm run compodoc",
-        "compodoc": "./node_modules/.bin/compodoc -p src/tsconfig.json -d docs -s"
+        "docs:serve": "npm run compodoc:serve",
+        "compodoc": "./node_modules/.bin/compodoc -p src/tsconfig.json -d docs",
+        "compodoc:serve": "./node_modules/.bin/compodoc -p src/tsconfig.json -d docs -s"
     },
     "private": true,
     "dependencies": {
