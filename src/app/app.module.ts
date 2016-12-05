@@ -4,47 +4,28 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { RouterModule, Router } from '@angular/router';
-import { SidebarModule } from 'ng2-sidebar';
 
 import { AppComponent } from './app.component';
-import { LectureListComponent } from './lectures/lecture-list/lecture-list.component';
-import { LayoutComponent } from './layout/layout.component';
-import { SidebarComponent } from './layout/sidebar/sidebar.component';
-import { HeaderComponent } from './layout/header/header.component';
-import { ContentComponent } from './layout/content/content.component';
-import { PaginationComponent } from './shared/pagination/pagination.component';
-import { LectureItemComponent } from './lectures/lecture-item/lecture-item.component';
-import { LectureDetailsComponent } from './lectures/lecture-details/lecture-details.component';
+import { LayoutModule } from './layout/layout.module';
+import { LectureModule } from './lectures/lecture.module';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { FooterComponent } from './layout/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LectureListComponent,
-    LayoutComponent,
-    SidebarComponent,
-    HeaderComponent,
-    ContentComponent,
-    PaginationComponent,
-    LectureItemComponent,
-    LectureDetailsComponent,
     HomeComponent,
     PageNotFoundComponent,
-    FooterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    SidebarModule,
+    LayoutModule,
+    LectureModule,
     MaterialModule.forRoot(),
     RouterModule.forRoot([
      { path: 'home', component: HomeComponent },
-     { path: 'lectures', component: LectureListComponent },
-     { path: 'lecture/:id', component: LectureDetailsComponent },
-     { path: 'about', component: LectureListComponent },
      { path: '', redirectTo: 'home', pathMatch: 'full' },
      { path: '**', component: PageNotFoundComponent }
     ])
