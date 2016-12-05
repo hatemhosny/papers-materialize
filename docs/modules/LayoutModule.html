@@ -67,7 +67,7 @@
                     </div>
                     <div id="modules" class="panel-collapse collapse
                                             
-                                            ">
+                                             in ">
                         <div class="panel-body">
                             <table class="table">
                                 <tr>
@@ -103,7 +103,7 @@
                     </div>
                     <div id="components" class="panel-collapse collapse
                                                 
-                                                 in ">
+                                                ">
                         <div class="panel-body">
                             <table class="table">
                                 <tr>
@@ -231,7 +231,7 @@
                            </div>
                            <div id="modules" class="panel-collapse collapse
                                                    
-                                                   ">
+                                                    in ">
                                <div class="panel-body">
                                    <table class="table">
                                        <tr>
@@ -267,7 +267,7 @@
                            </div>
                            <div id="components" class="panel-collapse collapse
                                                        
-                                                        in ">
+                                                       ">
                                <div class="panel-body">
                                    <table class="table">
                                        <tr>
@@ -343,65 +343,84 @@
                    
                    </div>
                </div>
-               <div class="col-sm-10 content component">
-
+               <div class="col-sm-10 content module">
 
                         <ol class="breadcrumb">
-                          <li><a href="./components.html">Components</a></li>
-                          <li>LectureItemComponent</li>
+                          <li><a href="./modules.html">Modules</a></li>
+                          <li>LayoutModule</li>
                         </ol>
                         
+                        <div class="text-center">
+                            <object id="demo-svg" type="image/svg+xml" data="modules/LayoutModule/dependencies.svg" style="width: 100%; height: 250px;">
+                                    Your browser does not support SVG
+                            </object>
+                            <div class="btn-group">
+                                <button id="zoom-in" class="btn btn-default btn-sm">Zoom in</button>
+                                <button id="reset" class="btn btn-default btn-sm">Reset</button>
+                                <button id="zoom-out" class="btn btn-default btn-sm">Zoom out</button>
+                            </div>
+                        </div>
+                        <script src="js/svg-pan-zoom.min.js"></script>
+                        <script src="js/svg-pan-zoom.controls.js"></script>
                         
-                                <p class="comment">
-                                    <h3>File</h3>
-                                </p>
-                                <p class="comment">
-                                    <code>src/app/lectures/lecture-item/lecture-item.component.ts</code>
-                                </p>
-                        
-                        
-                                <section>
-                                    <h3>Metadata</h3>
-                                    <table class="table table-sm table-hover">
-                                        <tbody>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
+                        <p class="comment">
+                            <h3>File</h3>
+                        </p>
+                        <p class="comment">
+                            <code>src/app/layout/layout.module.ts</code>
+                        </p>
                         
                         
+                        <div class="container-fluid module">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h3>Declarations<a href="https://angular.io/docs/ts/latest/api/core/index/NgModule-interface.html#!#declarations-anchor" target="_blank"><span class="fa fa-info-circle"></span></a></h3>
+                                    <ul class="list-group">
+                                            <li class="list-group-item">
+                                                <a  href="./components/LayoutComponent.html" >LayoutComponent</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <a  href="./components/SidebarComponent.html" >SidebarComponent</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <a  href="./components/HeaderComponent.html" >HeaderComponent</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <a  href="./components/ContentComponent.html" >ContentComponent</a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <a  href="./components/FooterComponent.html" >FooterComponent</a>
+                                            </li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-3">
+                                    <h3>Imports<a href="https://angular.io/docs/ts/latest/api/core/index/NgModule-interface.html#!#imports-anchor" target="_blank"><span class="fa fa-info-circle"></a></h3>
+                                    <ul class="list-group">
+                                            <li class="list-group-item">
+                                                    <a href="./modules/CommonModule.html" >CommonModule</a>
                         
+                                            </li>
+                                            <li class="list-group-item">
+                                                    <a href="./modules/SidebarModule.html" >SidebarModule</a>
                         
-                                            <tr>
-                                                <td class="col-md-3">selector</td>
-                                                <td class="col-md-9"><code>app-lecture-item</code></td>
-                                            </tr>
+                                            </li>
+                                            <li class="list-group-item">
+                                                    RouterModule
                         
-                                            <tr>
-                                                <td class="col-md-3">styleUrls</td>
-                                                <td class="col-md-9"><code>lecture-item.component.css</code></td>
-                                            </tr>
-                        
-                        
-                        
-                                            <tr>
-                                                <td class="col-md-3">templateUrl</td>
-                                                <td class="col-md-9"><code>lecture-item.component.html</code></td>
-                                            </tr>
-                        
-                        
-                                        </tbody>
-                                    </table>
-                                </section>
-                        
-                        
-                        
-                        
-                        
+                                            </li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-3">
+                                    <h3>Exports<a href="https://angular.io/docs/ts/latest/api/core/index/NgModule-interface.html#!#exports-anchor" target="_blank"><span class="fa fa-info-circle"></a></h3>
+                                    <ul class="list-group">
+                                            <li class="list-group-item">
+                                                <a href="./components/LayoutComponent.html" >LayoutComponent</a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
 
 
 
