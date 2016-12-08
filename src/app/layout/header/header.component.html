@@ -1,15 +1,19 @@
-<nav class="header navbar navbar-full navbar-fixed-top navbar-dark bg-inverse">
+<div class="navbar-fixed">
+    <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container">
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 
-    <a class="navbar-brand navbar-toggler" (click)="toggleSidebar()"></a>
+            <a id="logo-container" [routerLink]="['']" class="brand-logo">AHC Video Library</a>
+            <div class="right hide-on-med-and-down">
+                <form>
+                    <div class="input-field">
+                        <input id="search" type="search" required>
+                        <label for="search"><i class="material-icons">search</i></label>
+                        <i class="material-icons">close</i>
+                    </div>
+                </form>
+            </div>
 
-    <a class="navbar-brand" [routerLink]="['']">AHC Video Library</a>
-
-    <form class="form-inline float-lg-right">
-
-        <!--     <input class="form-control" type="text" placeholder="Search">  -->
-
-        <button class="btn btn-outline-secondary" type="submit">
-          <i class="fa fa-search" aria-hidden="true"></i>
-        </button>
-    </form>
-</nav>
+        </div>
+    </nav>
+</div>

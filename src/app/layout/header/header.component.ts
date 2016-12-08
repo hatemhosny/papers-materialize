@@ -12,10 +12,7 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
-
-  toggleSidebar() {
-   this.sidebar.toggleSidebar();
+    // $('.button-collapse').sideNav();
   }
 
 }
