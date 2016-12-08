@@ -1,9 +1,16 @@
 <div class="navbar-fixed">
-    <nav class="light-blue lighten-1" role="navigation">
-        <div class="nav-wrapper container">
-            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 
-            <a id="logo-container" [routerLink]="['']" class="brand-logo">AHC Video Library</a>
+    <nav class="light-blue lighten-1" role="navigation">
+        <ul class="left">
+            <a href="#" onclick="return false" data-activates="slide-out" class="button-collapse show-on-large">
+                <i class="material-icons menu-button">menu</i>
+            </a>
+        </ul>
+
+        <div class="nav-wrapper container">
+
+            <a href="#" id="logo-container" class="brand-logo">AHC Video Library</a>
+
             <div class="right hide-on-med-and-down">
                 <form>
                     <div class="input-field">
@@ -15,5 +22,62 @@
             </div>
 
         </div>
+
     </nav>
 </div>
+
+<ul class="side-nav" id="slide-out">
+    <li>
+        <div class="userView">
+            <div class="background">
+                <img src="images/office.jpg">
+            </div>
+            <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
+            <a href="#!name"><span class="white-text name">John Doe</span></a>
+            <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+        </div>
+    </li>
+    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+    <li><a href="#!">Second Link</a></li>
+    <li>
+        <div class="divider"></div>
+    </li>
+    <li>
+        <a class="waves-effect" [routerLink]="['']">
+            <i class="fa fa-home" aria-hidden="true"></i>Home
+        </a>
+    </li>
+    <li>
+        <a class="waves-effect" [routerLink]="['lectures']">
+            <i class="fa fa-video-camera" aria-hidden="true"></i>Lectures</a>
+    </li>
+    <li>
+        <a class="waves-effect" [routerLink]="['presenters']">
+            <i class="fa fa-group" aria-hidden="true"></i>Presenters</a>
+    </li>
+    <li>
+        <a class="waves-effect" [routerLink]="['series']">
+            <i class="fa fa-tags" aria-hidden="true"></i>Series</a>
+    </li>
+    <li>
+        <a class="waves-effect" [routerLink]="['history']">
+            <i class="fa fa-history" aria-hidden="true"></i>History</a>
+    </li>
+    <li>
+        <a class="waves-effect" [routerLink]="['bookmarks']">
+            <i class="fa fa-bookmark" aria-hidden="true"></i>Bookmarks</a>
+    </li>
+    <li>
+        <a class="waves-effect" [routerLink]="['search']">
+            <i class="fa fa-search" aria-hidden="true"></i>Search</a>
+    </li>
+    <li>
+        <a class="waves-effect" [routerLink]="['account']">
+            <i class="fa fa-user" aria-hidden="true"></i>Account</a>
+    </li>
+    <li>
+        <a class="waves-effect" [routerLink]="['about']">
+            <i class="fa fa-info-circle" aria-hidden="true"></i>About</a>
+    </li>
+
+</ul>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+declare var $: any;
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -7,14 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  private _open: boolean = false;
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
+
   }
 
-  public toggleSidebar() {
-    this._open = !this._open;
+  sideNav() {
   }
 }

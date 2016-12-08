@@ -1,16 +1,8 @@
-.header,
-.sidebar,
-.content,
-.footer {
-    margin: 0;
-    padding: 0;
-}
-
-.content {
+main {
     min-height: calc(100vh - 115px);
     margin-bottom: 0;
 }
 
-.footer {
+footer {
     height: 45px;
 }
