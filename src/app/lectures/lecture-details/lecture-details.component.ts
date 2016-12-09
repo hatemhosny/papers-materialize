@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+declare var $: any;
+
 @Component({
   selector: 'app-lecture-details',
   templateUrl: './lecture-details.component.html',
@@ -10,6 +12,7 @@ export class LectureDetailsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
+    $('ul.tabs').tabs('select_tab', 'Lecture');
+ }
 
 }

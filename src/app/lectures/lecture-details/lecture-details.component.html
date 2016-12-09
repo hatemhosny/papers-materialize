@@ -1,8 +1,17 @@
->Card with title
-
-<p>This is supporting text.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
-
-<p>Downloads...</p>
-
-<p>Related...</p>
+<div class="row">
+    <div class="col s12 card-panel">
+        <ul class="tabs">
+            <li class="tab col s3"><a [routerLink]="['.']" fragment="Lecture">Lecture</a></li>
+            <li class="tab col s3"><a [routerLink]="['.']" fragment="Downloads">Downloads</a></li>
+            <li class="tab col s3 disabled"><a [routerLink]="['.']" fragment="Disabled-Tab">Disabled Tab</a></li>
+            <li class="tab col s3"><a [routerLink]="['.']" fragment="Related">Related</a></li>
+        </ul>
+    </div>
+    <div id="Lecture" class="col s12">
+        <p>This is supporting text.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+    </div>
+    <div id="Downloads" class="col s12">Downloads...</div>
+    <div id="Disabled-Tab" class="col s12">Disabled Tab</div>
+    <div id="Related" class="col s12">Related content...</div>
+</div>
