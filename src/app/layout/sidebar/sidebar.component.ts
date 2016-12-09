@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-declare var $: any;
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -7,12 +7,8 @@ declare var $: any;
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { }
 
-  }
-
-  sideNav() {
-  }
 }
