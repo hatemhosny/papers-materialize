@@ -27,6 +27,37 @@
             margin-top: 200px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+        
+        .loader {
+            margin-top: 40px;
+            border: 7px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 7px solid blue;
+            border-right: 7px solid green;
+            border-bottom: 7px solid red;
+            width: 60px;
+            height: 60px;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
+        
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
 
@@ -34,8 +65,11 @@
     <app-root>
         <div class="loading">
             Loading Aswan Heart Centre Video Library...
+            <center>
+                <div class="loader"></div>
+            </center>
         </div>
     </app-root>
-<script type="text/javascript" src="inline.js"></script><script type="text/javascript" src="styles.cc03122340dd96cc39bf.bundle.js"></script><script type="text/javascript" src="scripts.953b312caabbffda9e45.bundle.js"></script><script type="text/javascript" src="main.dbca1efe171ecc397236.bundle.js"></script></body>
+<script type="text/javascript" src="inline.js"></script><script type="text/javascript" src="styles.291e9ba43ae13044b248.bundle.js"></script><script type="text/javascript" src="scripts.953b312caabbffda9e45.bundle.js"></script><script type="text/javascript" src="main.009c53bd15530486b2ed.bundle.js"></script></body>
 
 </html>
