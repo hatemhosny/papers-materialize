@@ -9,12 +9,13 @@ import { LayoutModule } from './layout/layout.module';
 import { LectureModule } from './lectures/lecture.module';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { BookmarksModule } from './bookmarks/bookmarks.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PageNotFoundComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +23,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HttpModule,
     LayoutModule,
     LectureModule,
+    BookmarksModule,
     RouterModule.forRoot([
      { path: 'home', component: HomeComponent },
      { path: '', redirectTo: 'home', pathMatch: 'full' },

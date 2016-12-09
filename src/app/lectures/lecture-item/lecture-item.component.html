@@ -1,13 +1,13 @@
-<div class="card">
+<div class="card z-depth-3">
     <div class="card-image">
-        <img src="http://materializecss.com/images/sample-1.jpg">
+        <img src="assets/images/sample-1.jpg">
     </div>
     <div class="card-content">
         <span class="card-title"><a [routerLink]="['/lecture/1']">Card title</a></span>
         <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
     </div>
     <div class="card-action">
-        <a href="#">This is a link</a>
-        <a href="#">This is a link</a>
+        <a [routerLink]="['.']" fragment="">This is a link</a>
+        <a [routerLink]="['.']" fragment="" class="waves-effect waves-light btn">button</a>
     </div>
 </div>
