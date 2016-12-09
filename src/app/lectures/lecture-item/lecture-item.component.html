@@ -9,5 +9,15 @@
     <div class="card-action">
         <a [routerLink]="['.']" fragment="">This is a link</a>
         <a [routerLink]="['.']" fragment="" class="waves-effect waves-light btn">button</a>
+
+        <a class='dropdown-button right' [routerLink]="['.']" fragment="" data-activates='lecture-actions'><i class="material-icons">more_horiz</i></a>
+
+        <!-- Dropdown Structure -->
+        <ul id='lecture-actions' class='dropdown-content'>
+            <li><a href="#!">one</a></li>
+            <li><a href="#!">two</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">three</a></li>
+        </ul>
     </div>
 </div>

@@ -7,7 +7,8 @@ import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   declarations: [
     PaginationComponent
