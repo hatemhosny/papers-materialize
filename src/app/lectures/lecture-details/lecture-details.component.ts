@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 declare var $: any;
 
@@ -7,12 +7,15 @@ declare var $: any;
   templateUrl: './lecture-details.component.html',
   styleUrls: ['./lecture-details.component.scss']
 })
-export class LectureDetailsComponent implements OnInit {
+export class LectureDetailsComponent implements OnInit, AfterViewInit {
 
   constructor() { }
 
   ngOnInit() {
-    $('ul.tabs').tabs('select_tab', 'Lecture');
  }
+
+  ngAfterViewInit() {
+    $('ul.tabs').tabs();
+  }
 
 }

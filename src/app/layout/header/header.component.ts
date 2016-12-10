@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 declare var $: any;
 
@@ -7,17 +7,17 @@ declare var $: any;
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, AfterViewInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { }
 
+  ngAfterViewInit() {
     $('.button-collapse').sideNav({
       closeOnClick: true,
       draggable: true
     });
-
   }
 
 }
