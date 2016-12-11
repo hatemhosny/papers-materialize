@@ -5,7 +5,7 @@
         <a class="btn-play"><i class="material-icons">play_arrow</i></a>
     </div>
     <div class="card-content">
-        <p>{{ item.description | truncate }}</p>
+        <p>{{ item.description | truncate : 250 }}</p>
     </div>
     <div class="card-action">
         <a [routerLink]="['.']" fragment="">This is a link</a>
