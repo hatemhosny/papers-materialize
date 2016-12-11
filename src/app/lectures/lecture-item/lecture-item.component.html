@@ -1,10 +1,12 @@
 <div class="card z-depth-3">
     <div class="card-image">
-        <img src="assets/images/sample-1.jpg">
+        <img src="{{item.imageUrl}}?{{item.id}}">
+        <a class="btn-play"><i class="material-icons">play_arrow</i></a>
+
     </div>
     <div class="card-content">
-        <span class="card-title"><a [routerLink]="['/lecture/1']">Card title</a></span>
-        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+        <span class="card-title truncate"><a [routerLink]="['/lecture/1']">{{item.title}}</a></span>
+        <p>{{item.description}}</p>
     </div>
     <div class="card-action">
         <a [routerLink]="['.']" fragment="">This is a link</a>

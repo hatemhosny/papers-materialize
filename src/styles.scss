@@ -1,3 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "styles/materialize/materialize.scss";
+.card {
+    margin: $card-padding;
+}
+
+.btn-play {
+    @extend .btn-floating;
+    @extend .btn-large;
+    @extend .waves-effect;
+    @extend .waves-light;
+    @extend .right;
+    background-color: $secondary-color;
+    margin-top: -($button-floating-large-size/2);
+    margin-right: $card-padding;
+}

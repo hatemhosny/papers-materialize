@@ -9,7 +9,7 @@ declare var $: any;
 })
 export class LectureItemComponent implements OnInit, AfterViewInit {
 
-  @Input() item: string;
+  @Input() item;
 
   constructor() { }
 

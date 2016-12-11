@@ -7,6 +7,7 @@ import { RouterModule, Router } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
 import { LectureModule } from './lectures/lecture.module';
+import { LectureService } from './lectures/lecture.service';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BookmarksModule } from './bookmarks/bookmarks.module';
@@ -30,7 +31,7 @@ import { BookmarksModule } from './bookmarks/bookmarks.module';
      { path: '**', component: PageNotFoundComponent }
     ])
   ],
-  providers: [],
+  providers: [ LectureService ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

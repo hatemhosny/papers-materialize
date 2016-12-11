@@ -20,7 +20,6 @@ import { LectureDetailsComponent } from './lecture-details/lecture-details.compo
     LectureItemComponent,
     LectureDetailsComponent
   ],
-  exports: [
-  ]
+  exports: [  ]
 })
 export class LectureModule { }
