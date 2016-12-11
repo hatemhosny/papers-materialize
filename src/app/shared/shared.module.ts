@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { PaginationComponent } from './pagination/pagination.component';
+import { TruncatePipe } from './truncate/truncate.pipe';
 
 @NgModule({
   imports: [
@@ -10,12 +11,14 @@ import { PaginationComponent } from './pagination/pagination.component';
     RouterModule
   ],
   declarations: [
-    PaginationComponent
+    PaginationComponent,
+    TruncatePipe
   ],
   exports: [
     CommonModule,
     RouterModule,
-    PaginationComponent
+    PaginationComponent,
+    TruncatePipe
   ]
 })
 export class SharedModule { }

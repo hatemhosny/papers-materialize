@@ -15,3 +15,7 @@
     margin-top: -($button-floating-large-size/2);
     margin-right: $card-padding;
 }
+
+.card-title-overlay {
+    background: rgba(0, 0, 0, .5);
+}
