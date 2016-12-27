@@ -1,13 +1,10 @@
-<div class="card z-depth-3">
-    <div class="card-image">
-        <img src="{{item.imageUrl}}?{{item.id}}">
-        <a [routerLink]="['1']"><span class="card-title card-title-overlay">{{item.title}}</span></a>
-        <a class="btn-play"><i class="material-icons">play_arrow</i></a>
-    </div>
+<div class="card small">
     <div class="card-content">
-        <p>{{ item.description | truncate : 250 }}</p>
+        <a [routerLink]="[item.id]"><span class="">{{item.title}}</span></a>
+        <p> {{ item.abstract[0].abstract_text | truncate : 250 }} </p>
     </div>
     <div class="card-action">
+        <a class="btn-play-no-image"><i class="material-icons">play_arrow</i></a>
         <a [routerLink]="['.']" fragment="">This is a link</a>
         <a [routerLink]="['.']" fragment="" class="waves-effect waves-light btn">button</a>
 

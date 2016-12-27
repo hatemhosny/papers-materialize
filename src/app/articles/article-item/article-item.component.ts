@@ -29,5 +29,4 @@ export class ArticleItemComponent implements OnInit, AfterViewInit {
       );
   }
 
-
 }

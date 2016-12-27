@@ -1,3 +1,4 @@
+import { IArticle } from './../article.model';
 import { Component, OnInit } from '@angular/core';
 
 import { ArticleService } from './../article.service';
@@ -8,7 +9,7 @@ import { ArticleService } from './../article.service';
 })
 export class ArticleListComponent implements OnInit {
 
-  items;
+  items: [IArticle];
 
   constructor(private _articleService: ArticleService) { }
 

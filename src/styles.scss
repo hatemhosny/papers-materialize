@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "styles/materialize/materialize.scss";
+body {
+    background-color: color("grey", "lighten-3");
+}
+
 .card {
     //margin: 0;
 }
@@ -16,6 +20,18 @@
     margin-right: $card-padding;
 }
 
+.btn-play-no-image {
+    @extend .btn-floating;
+    @extend .btn;
+    @extend .waves-effect;
+    @extend .waves-light;
+    @extend .right;
+    background-color: $secondary-color;
+    margin-top: -($button-floating-size);
+    margin-right: $card-padding;
+}
+
 .card-title-overlay {
     background: rgba(0, 0, 0, .5);
+    display: block;
 }
