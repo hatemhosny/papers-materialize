@@ -1,0 +1,9 @@
+<div id="article-list" class="row">
+    <div class="col s12 m6" *ngFor="let item of items">
+
+        <app-article-item [item]="item"></app-article-item>
+
+    </div>
+</div>
+
+<app-pagination></app-pagination>

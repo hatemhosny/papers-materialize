@@ -11,7 +11,7 @@ import { LectureDetailsComponent } from './lecture-details/lecture-details.compo
     SharedModule,
     RouterModule.forChild([
      { path: 'lectures', component: LectureListComponent },
-     { path: 'lecture/:id', component: LectureDetailsComponent },
+     { path: 'lectures/:id', component: LectureDetailsComponent },
      { path: 'about', component: LectureListComponent }
     ])
   ],
