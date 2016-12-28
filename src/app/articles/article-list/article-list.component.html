@@ -1,9 +1,11 @@
-<div id="article-list" class="row">
-    <div class="col s12 l6" *ngFor="let item of items">
+<div class="container">
+    <div id="article-list" class="row">
+        <div class="col s12 l6" *ngFor="let item of items">
 
-        <app-article-item [item]="item"></app-article-item>
+            <app-article-item [item]="item"></app-article-item>
 
+        </div>
     </div>
-</div>
 
-<app-pagination></app-pagination>
+    <app-pagination></app-pagination>
+</div>
