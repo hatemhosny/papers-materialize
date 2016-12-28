@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 
 import { ArticleService } from './../article.service';
 
@@ -10,13 +11,14 @@ export class ArticleListComponent implements OnInit {
 
   items;
   errorMessage: string;
+  busy: Subscription;
 
   constructor(private _articleService: ArticleService) { }
 
   ngOnInit(): void {
-    this._articleService.getArticles()
-      .subscribe(articles => this.items = articles,
-                 error => this.errorMessage = <any>error);
+    this.busy = this._articleService.getArticles()
+                    .subscribe(articles => this.items = articles,
+                              error => this.errorMessage = <any>error);
   }
 
 }

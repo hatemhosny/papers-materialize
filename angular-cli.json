@@ -17,7 +17,8 @@
         "prefix": "app",
         "mobile": false,
         "styles": [
-            "styles/styles.scss"
+            "styles/styles.scss",
+            "../node_modules/angular2-busy/build/style/busy.css"
         ],
         "scripts": [
             "../node_modules/jquery/dist/jquery.js",
