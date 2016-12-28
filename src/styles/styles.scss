@@ -1,3 +1,6 @@
+// Custom Materialize Variables
+@import "materialize_variables";
+// Materialize
 @import "materialize/materialize.scss";
 body {
     background-color: color("grey", "lighten-3");

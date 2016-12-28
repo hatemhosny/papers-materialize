@@ -3,6 +3,9 @@
 // Overrides variables in materialize/components/_variables.scss
 // ==========================================================================
 //
+// import color definitions
+@import "materialize/components/color";
+//
 // 1. Colors
 // ==========================================================================
 $primary-color: color("blue", "darken-1");
