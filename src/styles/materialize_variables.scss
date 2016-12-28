@@ -1,0 +1,13 @@
+// ==========================================================================
+// Custom Materialize Variables
+// Overrides variables in materialize/components/_variables.scss
+// ==========================================================================
+//
+// 1. Colors
+// ==========================================================================
+$primary-color: color("blue", "darken-1");
+$secondary-color: color("pink", "darken-1");
+$link-color: color("light-blue", "darken-1");
+// 9. Fonts
+// ==========================================================================
+$roboto-font-path: "../assets/fonts/roboto/";
