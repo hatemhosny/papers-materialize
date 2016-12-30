@@ -1,21 +1,27 @@
-<div class="card small">
+<div class="card medium">
+    <div>
+        <div class="article-item-title grey-text text-darken-4 grey lighten-3">{{item.title}}</div>
+        <a class="btn-play-medium"><i class="material-icons">play_arrow</i></a>
+    </div>
     <div class="card-content">
-        <a [routerLink]="[item.id]"><span class="">{{item.title}}</span></a>
-        <p> {{ item.abstract[0].abstract_text | truncate : 250 }} </p>
+        <div class="article-item-abstract blue-grey-text text-darken-3"> {{ item.abstract[0].abstract_text }} </div>
     </div>
     <div class="card-action">
-        <a class="btn-play-no-image"><i class="material-icons">play_arrow</i></a>
-        <a [routerLink]="['.']" fragment="">This is a link</a>
-        <a [routerLink]="['.']" fragment="" class="waves-effect waves-light btn">button</a>
+        <span class="article-item-info blue-grey-text text-lighten-3">
+            {{item.month}}, {{item.year}}
+        </span>
+        <span class="blue-grey-text text-lighten-3"> | </span>
+        <span class="article-item-info blue-grey-text text-lighten-3">
+            {{item.journal}}
+        </span>
 
-        <a class="dropdown-button right" [routerLink]="['.']" fragment="" data-activates="article-actions"><i class="material-icons">more_horiz</i></a>
+        <i class="material-icons right activator">more_vert</i>
+    </div>
+    <div class="card-reveal">
+        <div class="card-title"><i class="material-icons right close">close</i>
+            <div class="grey-text text-darken-4">{{item.title}}</div>
+        </div>
 
-        <!-- Dropdown Structure -->
-        <ul id="article-actions" class="dropdown-content">
-            <li><a href="#!">one</a></li>
-            <li><a href="#!">two</a></li>
-            <li class="divider"></li>
-            <li><a href="#!">three</a></li>
-        </ul>
+        <p>Here is some more information about this product that is only revealed once clicked on.</p>
     </div>
 </div>

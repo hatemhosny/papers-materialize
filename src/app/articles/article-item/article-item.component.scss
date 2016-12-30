@@ -1,0 +1,31 @@
+.article-item-title {
+    font-weight: 500;
+    padding: 10px 10px 20px 10px;
+    border-bottom: 1px solid rgba(160, 160, 160, .2);
+}
+
+.card-content {
+    position: relative;
+    clear: both;
+}
+
+.article-item-abstract {
+    //    font-size: 90%;
+    margin-top: -20px;
+}
+
+.article-item-info {
+    font-size: 80%;
+    font-style: italic;
+}
+
+.article-item-title,
+.activator,
+.close {
+    cursor: pointer;
+}
+
+.card-reveal .card-title {
+    font-size: 100%;
+    font-weight: 500;
+}

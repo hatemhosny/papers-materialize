@@ -21,18 +21,33 @@ body {
     margin-right: $card-padding;
 }
 
-.btn-play-no-image {
+.btn-play-medium {
     @extend .btn-floating;
     @extend .btn;
     @extend .waves-effect;
     @extend .waves-light;
     @extend .right;
     background-color: $secondary-color;
-    margin-top: -($button-floating-size);
+    margin-top: -($button-floating-size/2);
     margin-right: $card-padding;
 }
 
 .card-title-overlay {
     background: rgba(0, 0, 0, .5);
     display: block;
+}
+
+.flow-text {
+    font-weight: 300;
+    $i: 0;
+    @while $i <=$intervals {
+        @media only screen and (min-width: 360 + ($i * $interval-size)) {
+            font-size: 0.7rem * (1 + (.02 * $i));
+        }
+        $i: $i+1;
+    }
+    // Handle below 360px screen
+    @media only screen and (max-width: 360px) {
+        font-size: 1rem;
+    }
 }
