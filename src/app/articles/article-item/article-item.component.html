@@ -1,10 +1,12 @@
 <div class="card medium">
     <div>
-        <div class="article-item-title grey-text text-darken-4 grey lighten-2">{{item.title}}</div>
+        <div class="article-item-title block-ellipsis-3 grey-text text-darken-4 grey lighten-2">{{item.title}}</div>
         <a class="btn-play-medium"><i class="material-icons">play_arrow</i></a>
     </div>
     <div class="card-content">
-        <div class="article-item-abstract block-ellipsis blue-grey-text text-darken-3"> {{ item.abstract | stringify }} </div>
+        <div class="article-item-abstract block-ellipsis-7 blue-grey-text text-darken-3">
+            {{ item.abstract | stringify }}
+        </div>
     </div>
     <div class="card-action">
         <span class="article-item-info blue-grey-text text-lighten-3">
@@ -14,7 +16,6 @@
         <span class="article-item-info blue-grey-text text-lighten-3">
             {{item.journal}}
         </span>
-
         <i class="material-icons right activator">more_vert</i>
     </div>
     <div class="card-reveal">

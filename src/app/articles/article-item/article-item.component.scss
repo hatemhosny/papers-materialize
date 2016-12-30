@@ -9,10 +9,7 @@
     clear: both;
 }
 
-.article-item-abstract {
-    //    font-size: 90%;
-    margin-top: -20px;
-}
+.article-item-abstract {}
 
 .article-item-info {
     font-size: 80%;
@@ -28,22 +25,4 @@
 .card-reveal .card-title {
     font-size: 100%;
     font-weight: 500;
-}
-
-.card-content {
-  overflow: hidden;
-}
-
-.block-ellipsis {
-  display: block;
-  display: -webkit-box;
-  max-width: 100%;
-  height: 10.5rem;
-  margin: 0 auto;
-  font-size: 1rem;
-  line-height: 1.5;
-  -webkit-line-clamp: 7;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
