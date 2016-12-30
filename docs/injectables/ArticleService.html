@@ -241,6 +241,11 @@
                             <table class="table">
                                 <tr>
                                     <td>
+                                        <a href="./pipes/StringifyPipe.html">StringifyPipe</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
                                         <a href="./pipes/TruncatePipe.html">TruncatePipe</a>
                                     </td>
                                 </tr>
@@ -482,6 +487,11 @@
                                    <table class="table">
                                        <tr>
                                            <td>
+                                               <a href="./pipes/StringifyPipe.html">StringifyPipe</a>
+                                           </td>
+                                       </tr>
+                                       <tr>
+                                           <td>
                                                <a href="./pipes/TruncatePipe.html">TruncatePipe</a>
                                            </td>
                                        </tr>
@@ -522,13 +532,40 @@
                                         <tr>
                                             <td class="col-md-3"><code>getArticles</code></td>
                                             <td class="col-md-9">
-                                                    <div><i>Return type: </i><code>[IArticle]</code></div>
+                                                    <div><i>Return type: </i><code>Observable&lt;IArticle[]&gt;</code></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-3"><code>getArticlesInJournal</code></td>
+                                            <td class="col-md-9">
+                                                    <div><i>Signature: </i><code>getArticlesInJournal(journalIssn: string)</code></div>
+                                                    <div><i>Return type: </i><code>Observable&lt;IArticle[]&gt;</code></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-md-3"><code>getArticle</code></td>
+                                            <td class="col-md-9">
+                                                    <div><i>Signature: </i><code>getArticle(id: number)</code></div>
+                                                    <div><i>Return type: </i><code>Observable&lt;IArticle&gt;</code></div>
                                             </td>
                                         </tr>
                                 </tbody>
                             </table>
                         </section>
                         
+                        <section>
+                            <h3 id="inputs">Properties</h3>
+                            <table class="table table-sm table-hover">
+                                <tbody>
+                                        <tr>
+                                            <td class="col-md-3"><code>articles</code></td>
+                                            <td class="col-md-9">
+                                                    <div><i>Type: </i><code>IArticle[]</code></div>
+                                            </td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                        </section>
 
 
 
