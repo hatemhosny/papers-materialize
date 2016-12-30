@@ -4,7 +4,7 @@
         <a class="btn-play-medium"><i class="material-icons">play_arrow</i></a>
     </div>
     <div class="card-content">
-        <div class="article-item-abstract block-ellipsis blue-grey-text text-darken-3"> {{ item.abstract[0].abstract_text }} </div>
+        <div class="article-item-abstract block-ellipsis blue-grey-text text-darken-3"> {{ item.abstract | stringify }} </div>
     </div>
     <div class="card-action">
         <span class="article-item-info blue-grey-text text-lighten-3">

@@ -12,34 +12,55 @@ import { environment } from '../../environments/environment';
 @Injectable()
 export class ArticleService {
 
+  articles: IArticle[];
+
   private url: string = environment.papersApiUrl + environment.apiArticles;
 
-  private filters: string = 'filter[meta_key]=journal&filter[meta_value]=circulation' ;
+  private filters: string = 'filter[meta_key]=has_audio&filter[meta_value]=1';
+
   private fields = {
                     'id': 'id',
                     'title': 'title.rendered',
-                    'journal': 'acf.journal',
-                    'types': 'acf.publication_types',
-                    'duration': 'acf.audio_duration',
+                    'pmid': 'acf.pmid',
                     'date': 'acf.publication_date',
                     'year': 'acf.year',
                     'month': 'acf.month',
-                    'abstract': 'acf.abstract'
+                    'authors': 'acf.authors',
+                    'abstract': 'acf.abstract',
+                    'journal': 'acf.journal',
+                    'journalIssn': 'acf.journal_issn',
+                    'publicationTypes': 'acf.publication_types',
+                    'audioDuration': 'acf.audio_duration'
                   };
 
-  private parameters: string = '_query=[*].' + JSON.stringify(this.fields).replace(/"/g, '');
+  // convert fields object to string and remove double quotes
+  private formattedFields: string = '_query=[*].' + JSON.stringify(this.fields).replace(/"/g, '');
+
   private client: string = 'client=' + environment.client;
 
-  private fullUrl: string = this.url + '?' + this.parameters + '&' + this.filters + '&' + this.client;
+  private fullUrl: string = this.url + '?' + this.filters + '&' + this.formattedFields + '&' + this.client;
 
 
   constructor(private http: Http) { }
 
+  private requestArticles(url: string) {
+        return this.http.get(url)
+        .map((response: Response) => <IArticle[]>response.json())
+        .do(data => this.articles = data)
+        .catch(this.handleError);
+
+  }
   getArticles(): Observable<IArticle[]> {
-    return this.http.get(this.fullUrl)
-      .map((response: Response) => <IArticle[]>response.json())
-       .do(data => console.log(this.fullUrl))
-      .catch(this.handleError);
+    return this.requestArticles(this.fullUrl);
+  }
+
+  getArticlesInJournal(journalIssn: string): Observable<IArticle[]> {
+    if (journalIssn) {
+      let journalFilter: string = 'filter[meta_key]=journal_issn&filter[meta_value]=' + journalIssn;
+      return this.requestArticles(this.fullUrl + '&' + journalFilter);
+    } else {
+      this.getArticles();
+    }
   }
 
   getArticle(id: number): Observable<IArticle> {
