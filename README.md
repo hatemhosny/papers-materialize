@@ -1,15 +1,16 @@
 # Ng2Material
 
-Angular 2 app with material design using materializecss.
+Angular 2 app with material design using [materializecss](http://materializecss.com/).
+
 https://github.com/hatemhosny/ng2-material
 
 ## Development server
 
-Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. Navigate to [http://localhost:4200/](http://localhost:4200/). The app will automatically reload if you change any of the source files.
 
 ## API server
 
-Run `npm run api` for a fake REST API server. The server address is `http://localhost:3000/`. 
+Run `npm run api` for a fake REST API server. The server address is [http://localhost:3000/](http://localhost:3000/). 
 
 ## Code scaffolding
 
@@ -31,17 +32,17 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 ## Deploy
 
--Run `npm run deploy:gh-pages` to deploy to Github Pages. 
--Run `npm run deploy:surge` to deploy to Surge. Navigate to `http://papersfm.surge.sh`. Configure the domain in the npm script `surge`.
--Run `npm run deploy:dev` to deploy Git repo by FTP to server `dev` configured in `dploy.yaml`, using [DPLOY](https://github.com/lucasmotta/dploy)
--Run `npm run deploy:stag` to deploy Git repo by FTP to server `stag` configured in `dploy.yaml`. 
--Run `npm run deploy:prod` to deploy Git repo by FTP to server `prod` configured in `dploy.yaml`. 
+- Run `npm run deploy:gh-pages` to deploy to Github Pages. 
+- Run `npm run deploy:surge` to deploy to Surge. Navigate to [http://papersfm.surge.sh](http://papersfm.surge.sh). Configure the domain in the npm script `surge`.
+- Run `npm run deploy:dev` to deploy Git repo by FTP to server `dev` configured in `dploy.yaml`, using [DPLOY](https://github.com/lucasmotta/dploy)
+- Run `npm run deploy:stag` to deploy Git repo by FTP to server `stag` configured in `dploy.yaml`. 
+- Run `npm run deploy:prod` to deploy Git repo by FTP to server `prod` configured in `dploy.yaml`. 
 
--Run `npm run share` to serve the app through localtunnel. Navigate to `http://papersfm.localtunnel.me`. Configure the domain in the npm script `localtunnel`.
+- Run `npm run share` to serve the app through localtunnel. Navigate to [http://papersfm.localtunnel.me](http://papersfm.localtunnel.me). Configure the domain in the npm script `localtunnel`.
 
 ## App Documentation
 
--Run `npm run docs` to build the app documentation using compodoc. Run `npm run docs:serve` to build the app documentation and serve it on `http://localhost:4200/`.
+Run `npm run docs` to build the app documentation using compodoc. Run `npm run docs:serve` to build the app documentation and serve it on [http://localhost:8080/](http://localhost:8080/).
 
 ## Further help
 
