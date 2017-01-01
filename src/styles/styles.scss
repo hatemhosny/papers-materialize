@@ -63,3 +63,9 @@ body {
     height: 10.5rem;
     -webkit-line-clamp: 7;
 }
+
+.block-ellipsis-9 {
+    @extend .block-ellipsis-3;
+    height: 13.5rem;
+    -webkit-line-clamp: 9;
+}

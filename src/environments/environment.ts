@@ -6,6 +6,7 @@
 export const environment = {
   production: false,
   envName: 'development',
+//  papersApiUrl: 'assets/articles.json',
   papersApiUrl: 'http://dev.papers.fm/',
   apiArticles: 'wp-json/wp/v2/articles/',
   apiJournals: 'wp-json/wp/v2/journals/',
@@ -13,4 +14,3 @@ export const environment = {
 };
 
 
-// papersApiUrl: 'assets/articles.json';
