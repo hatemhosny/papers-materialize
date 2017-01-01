@@ -4,7 +4,7 @@ dev:
     port: 21
     user: user
     pass: password
-    check: true
+    check: false
     path:
         local: release/
         remote: public_html/
