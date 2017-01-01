@@ -8,6 +8,7 @@ dev:
     path:
         local: release/
         remote: public_html/
+#    branch: [master, develop]
 
 stag:
     scheme: ftp
@@ -19,6 +20,7 @@ stag:
     path:
         local: release/
         remote: public_html/
+    branch: [master, develop]
 
 prod:
     scheme: ftp
@@ -30,3 +32,4 @@ prod:
     path:
         local: release/
         remote: public_html/
+    branch: [master, develop]
