@@ -91,9 +91,11 @@ export class ArticleService {
   }
 
   // TODO implement (convert filter object to querystring)
+  /*
   private formatFilters(filters: {}): string {
     return '';
   }
+  */
 
   // TODO log errors
   private handleError(error: Response) {
