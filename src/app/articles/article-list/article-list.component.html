@@ -11,7 +11,13 @@
 
     <!-- TODO format pagination links and delete pagination component from shared module -->
     <div class="articles-pagination">
-        <div class="loading-indicator" [style.visibility]="loading ? 'visible': 'hidden'">Loading...</div>
+        <div id="loading-indicator" [style.visibility]="loading ? 'visible': 'hidden'">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <div class="loading-error" *ngIf="errorMessage">There was an error during loading. Please try again later.</div>
         <pagination-controls (pageChange)="loadArticles($event)" maxSize="7" directionLinks="true" autoHide="true">
         </pagination-controls>
