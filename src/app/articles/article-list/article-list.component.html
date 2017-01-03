@@ -1,9 +1,19 @@
 <div class="container">
     <div id="article-list" class="row" style="position:relative; margin-top: 30px;">
         <div [ngBusy]="{busy: busy, message: 'Loading...'}"></div>
-        <div class="col s12 l6" *ngFor="let item of items">
+        <div class="col s12 l6" *ngFor="let item of items | paginate: {
+                                                      itemsPerPage: itemsPerPage,
+                                                      currentPage: currentPage,
+                                                      totalItems: totalItems }">
             <app-article-item [item]="item"></app-article-item>
         </div>
     </div>
-    <app-pagination></app-pagination>
+
+    <!-- TODO format pagination links and delete pagination component from shared module -->
+    <div class="articles-pagination">
+        <div class="loading-indicator" [style.visibility]="loading ? 'visible': 'hidden'">Loading...</div>
+        <div class="loading-error" *ngIf="errorMessage">There was an error during loading. Please try again later.</div>
+        <pagination-controls (pageChange)="loadArticles($event)" maxSize="7" directionLinks="true" autoHide="true">
+        </pagination-controls>
+    </div>
 </div>
