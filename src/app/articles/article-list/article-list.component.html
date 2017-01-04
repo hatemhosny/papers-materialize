@@ -1,10 +1,9 @@
 <div class="container">
     <div id="article-list" class="row" style="position:relative; margin-top: 30px;">
-        <div [ngBusy]="{busy: busy, message: 'Loading...'}"></div>
-        <div class="col s12 l6" *ngFor="let item of items | paginate: {
-                                                      itemsPerPage: itemsPerPage,
-                                                      currentPage: currentPage,
-                                                      totalItems: totalItems }">
+        <div class="col s12 l6" *ngFor="let item of items | paginate: { id: 'article-pagination',
+                                                                        itemsPerPage: itemsPerPage,
+                                                                        currentPage: currentPage,
+                                                                        totalItems: totalItems }">
             <app-article-item [item]="item"></app-article-item>
         </div>
     </div>
@@ -20,26 +19,6 @@
         </div>
         <div class="loading-error" *ngIf="errorMessage">There was an error during loading. Please try again later.</div>
 
-        <pagination-template #p="paginationApi" (pageChange)="loadArticles($event)">
-            <div *ngIf="p.pages.length > 0" class="pagination-control">
-                <ul class="pagination">
-                    <li class="waves-effect" [class.disabled]="p.isFirstPage()">
-                        <a *ngIf="!p.isFirstPage()" (click)="p.previous()"><i class="material-icons">chevron_left</i></a>
-                    </li>
-                    <li *ngFor="let page of p.pages" [class.active]="p.getCurrent() === page.value">
-                        <a *ngIf="p.getCurrent() === page.value">
-                        {{ page.label }}
-                        </a>
-                        <span class="waves-effect">
-                        <a (click)="p.setCurrent(page.value)" *ngIf="p.getCurrent() !== page.value"><span>{{ page.label }}</span></a>
-                        </span>
-                    </li>
-                    <li class="waves-effect" [class.disabled]="p.isLastPage()">
-                        <a *ngIf="!p.isLastPage()" (click)="p.next()"><i class="material-icons">chevron_right</i></a>
-                    </li>
-                </ul>
-            </div>
-        </pagination-template>
-
+        <app-pagination [id]="'article-pagination'" (pageChanged)="loadArticles($event)"></app-pagination>
     </div>
 </div>
