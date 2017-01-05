@@ -8,17 +8,14 @@
         </div>
     </div>
 
-    <!-- TODO move to pagination component in shared module -->
-    <div class="articles-pagination">
-        <div id="loading-indicator" [style.visibility]="loading ? 'visible': 'hidden'">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="loading-error" *ngIf="errorMessage">There was an error during loading. Please try again later.</div>
-
-        <app-pagination [id]="'article-pagination'" (pageChanged)="loadArticles($event)"></app-pagination>
+    <div id="loading-indicator" [style.visibility]="loading ? 'visible': 'hidden'">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
+    <div class="loading-error" *ngIf="errorMessage">There was an error during loading. Please try again later.</div>
+
+    <app-pagination [id]="'article-pagination'" [(pageQuery)]="pageQuery" (pageChanged)="loadArticles($event)"></app-pagination>
 </div>
