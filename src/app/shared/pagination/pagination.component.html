@@ -1,16 +1,20 @@
-<div class="pagination-control">
-    <ul class="pagination">
-        <li class="waves-effect">
-            <a [routerLink]="['.']" fragment=""><i class="material-icons">chevron_left</i></a>
-        </li>
-        <li class="active">
-            <a [routerLink]="['.']" fragment="">1</a>
-        </li>
-        <li class="waves-effect" *ngFor="let page of pages">
-            <a [routerLink]="['.']" fragment="">{{page}}</a>
-        </li>
-        <li class="waves-effect">
-            <a [routerLink]="['.']" fragment=""><i class="material-icons">chevron_right</i></a>
-        </li>
-    </ul>
-</div>
+<pagination-template [id]="id" maxSize="7" #p="paginationApi" (pageChange)="pageChanged.emit($event)">
+    <div *ngIf="p.pages.length > 0" class="pagination-control">
+        <ul class="pagination">
+            <li class="waves-effect" [class.disabled]="p.isFirstPage()">
+                <a *ngIf="!p.isFirstPage()" (click)="p.previous()"><i class="material-icons">chevron_left</i></a>
+            </li>
+            <li *ngFor="let page of p.pages" [class.active]="p.getCurrent() === page.value">
+                <a *ngIf="p.getCurrent() === page.value">
+                        {{ page.label }}
+                        </a>
+                <span class="waves-effect">
+                        <a (click)="p.setCurrent(page.value)" *ngIf="p.getCurrent() !== page.value"><span>{{ page.label }}</span></a>
+                </span>
+            </li>
+            <li class="waves-effect" [class.disabled]="p.isLastPage()">
+                <a *ngIf="!p.isLastPage()" (click)="p.next()"><i class="material-icons">chevron_right</i></a>
+            </li>
+        </ul>
+    </div>
+</pagination-template>
