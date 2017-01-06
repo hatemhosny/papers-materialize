@@ -11,7 +11,6 @@ export class ArticleListComponent implements OnInit, AfterViewInit {
 
   private items: IArticle[];
   private errorMessage: string;
-  private loading: boolean = false;
 
   private currentPage: number = 1;
   private itemsPerPage: number;
@@ -31,22 +30,24 @@ export class ArticleListComponent implements OnInit, AfterViewInit {
   }
 
   loadArticles(page: number) {
-
-    this.loading = true;
-
+/*
+    this.slimLoadingBarService.start(() => {
+            console.log('Loading complete');
+        });
+*/
     this.articleService.getArticles(page).subscribe(
       articles => {
         this.items = articles;
         this.totalItems = this.articleService.getNumberOfTotalItems();
 
         this.currentPage = page;
-        this.loading = false;
+        // this.slimLoadingBarService.complete();
         this.errorMessage = null;
         this.pageQuery = page;
         window.scrollTo(0, 0);  // TODO smooth scroll
       },
       error => {
-        this.loading = false;
+        // this.slimLoadingBarService.stop();
         this.errorMessage = <any>error;  // TODO log error
       }
     );
