@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { NgProgressService } from 'ng2-progressbar';
 
 import { ArticleService } from './../article.service';
 import { IArticle } from '../article.model';
@@ -18,7 +19,8 @@ export class ArticleListComponent implements OnInit, AfterViewInit {
   pageQuery: number;
 
   constructor(
-    private articleService: ArticleService
+    private articleService: ArticleService,
+    private progressService: NgProgressService
     ) { }
 
   ngOnInit(): void {
@@ -30,24 +32,24 @@ export class ArticleListComponent implements OnInit, AfterViewInit {
   }
 
   loadArticles(page: number) {
-/*
-    this.slimLoadingBarService.start(() => {
-            console.log('Loading complete');
-        });
-*/
+            console.log('start Loading');
+
+    this.progressService.start();
+
     this.articleService.getArticles(page).subscribe(
       articles => {
         this.items = articles;
         this.totalItems = this.articleService.getNumberOfTotalItems();
 
         this.currentPage = page;
-        // this.slimLoadingBarService.complete();
+            console.log('end Loading');
+        this.progressService.done();
         this.errorMessage = null;
         this.pageQuery = page;
         window.scrollTo(0, 0);  // TODO smooth scroll
       },
       error => {
-        // this.slimLoadingBarService.stop();
+        this.progressService.done();
         this.errorMessage = <any>error;  // TODO log error
       }
     );

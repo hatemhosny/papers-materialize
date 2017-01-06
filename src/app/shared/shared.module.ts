@@ -2,29 +2,35 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Ng2PaginationModule } from 'ng2-pagination';
+import { NgProgressModule } from 'ng2-progressbar';
 
-import { PaginationComponent } from './pagination/pagination.component';
 import { TruncatePipe } from './truncate/truncate.pipe';
 import { StringifyPipe } from './stringify/stringify.pipe';
+import { PaginationComponent } from './pagination/pagination.component';
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
-    Ng2PaginationModule
+    Ng2PaginationModule,
+    NgProgressModule
   ],
   declarations: [
-    PaginationComponent,
     TruncatePipe,
-    StringifyPipe
+    StringifyPipe,
+    PaginationComponent,
+    LoadingComponent
   ],
   exports: [
     CommonModule,
     RouterModule,
-    PaginationComponent,
     TruncatePipe,
     StringifyPipe,
-    Ng2PaginationModule
+    PaginationComponent,
+    Ng2PaginationModule,
+    LoadingComponent,
+    NgProgressModule
   ]
 })
 export class SharedModule { }
