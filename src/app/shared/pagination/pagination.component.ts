@@ -10,6 +10,7 @@ import { Subscription } from 'rxjs';
 export class PaginationComponent implements OnInit, OnDestroy {
 
   private subscription: Subscription;
+  p;
 
   @Input() id: string;
   @Output() pageChanged: EventEmitter<any> = new EventEmitter();

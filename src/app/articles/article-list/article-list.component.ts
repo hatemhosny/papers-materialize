@@ -9,13 +9,13 @@ import { IArticle } from '../article.model';
 })
 export class ArticleListComponent implements OnInit, AfterViewInit {
 
-  private items: IArticle[];
-  private errorMessage: string;
+  items: IArticle[];
+  errorMessage: string;
 
-  private currentPage: number = 1;
-  private itemsPerPage: number;
-  private totalItems: number;
-  private pageQuery: number;
+  currentPage: number = 1;
+  itemsPerPage: number;
+  totalItems: number;
+  pageQuery: number;
 
   constructor(
     private articleService: ArticleService
