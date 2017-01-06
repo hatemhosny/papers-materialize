@@ -15,54 +15,76 @@
         }
         
         #loading {
-            width: 70px;
-            height: 35px;
-            overflow: hidden;
+            width: 100%;
             position: absolute;
-            top: calc(50% - 17px);
-            left: calc(50% - 35px);
+            top: calc(50% - 50px);
+            text-align: center;
         }
         
         #loading-text {
-            width: 100%;
-            position: absolute;
-            top: calc(50% + 35px);
-            text-align: center;
             color: #1e88e5;
             font-size: 1rem;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
         
-        #loader {
-            width: 70px;
-            height: 70px;
-            border-style: solid;
-            border-top-color: #1e88e5;
-            border-right-color: #1e88e5;
-            border-left-color: transparent;
-            border-bottom-color: transparent;
-            border-radius: 50%;
-            box-sizing: border-box;
-            animation: rotate 3s ease-in-out infinite;
-            transform: rotate(-200deg)
+        #loading-indicator {
+            position: relative;
+            left: calc(50% - 25px);
+            width: 50px;
+            height: 10px;
+            margin-bottom: 35px;
         }
         
-        @keyframes rotate {
+        #loading-indicator span {
+            display: block;
+            bottom: 0px;
+            width: 9px;
+            height: 5px;
+            background: #9b59b6;
+            position: absolute;
+            animation: loading-indicator 1.5s infinite ease-in-out;
+        }
+        
+        #loading-indicator span:nth-child(2) {
+            left: 11px;
+            animation-delay: .2s;
+        }
+        
+        #loading-indicator span:nth-child(3) {
+            left: 22px;
+            animation-delay: .4s;
+        }
+        
+        #loading-indicator span:nth-child(4) {
+            left: 33px;
+            animation-delay: .6s;
+        }
+        
+        #loading-indicator span:nth-child(5) {
+            left: 44px;
+            animation-delay: .8s;
+        }
+        
+        @keyframes loading-indicator {
             0% {
-                border-width: 10px;
+                height: 5px;
+                transform: translateY(0px);
+                background: #9b59b6;
             }
             25% {
-                border-width: 3px;
+                height: 30px;
+                transform: translateY(15px);
+                background: #3498db;
             }
             50% {
-                transform: rotate(115deg);
-                border-width: 10px;
-            }
-            75% {
-                border-width: 3px;
+                height: 5px;
+                transform: translateY(0px);
+                background: #9b59b6;
             }
             100% {
-                border-width: 10px;
+                height: 5px;
+                transform: translateY(0px);
+                background: #9b59b6;
             }
         }
     </style>
@@ -71,9 +93,15 @@
 <body>
     <app-root>
         <div id="loading">
-            <div id="loader"></div>
+            <div id="loading-indicator">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="loading-text">Loading the voice of medical literature...</div>
         </div>
-        <div id="loading-text">Loading...</div>
     </app-root>
 </body>
 
