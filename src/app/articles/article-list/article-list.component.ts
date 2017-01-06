@@ -19,8 +19,7 @@ export class ArticleListComponent implements OnInit, AfterViewInit {
   pageQuery: number;
 
   constructor(
-    private articleService: ArticleService,
-    private progressService: NgProgressService
+    private articleService: ArticleService
     ) { }
 
   ngOnInit(): void {
@@ -32,9 +31,8 @@ export class ArticleListComponent implements OnInit, AfterViewInit {
   }
 
   loadArticles(page: number) {
-            console.log('start Loading');
 
-    this.progressService.start();
+    // this.progressService.start();
 
     this.articleService.getArticles(page).subscribe(
       articles => {
@@ -42,14 +40,13 @@ export class ArticleListComponent implements OnInit, AfterViewInit {
         this.totalItems = this.articleService.getNumberOfTotalItems();
 
         this.currentPage = page;
-            console.log('end Loading');
-        this.progressService.done();
+        // this.progressService.done();
         this.errorMessage = null;
         this.pageQuery = page;
         window.scrollTo(0, 0);  // TODO smooth scroll
       },
       error => {
-        this.progressService.done();
+        // this.progressService.done();
         this.errorMessage = <any>error;  // TODO log error
       }
     );
