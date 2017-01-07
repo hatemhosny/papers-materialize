@@ -13,6 +13,7 @@ import { ArticleService } from './articles/article.service';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BookmarksModule } from './bookmarks/bookmarks.module';
+import { LoadingService } from './shared/loading/loading.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { BookmarksModule } from './bookmarks/bookmarks.module';
      { path: '**', component: PageNotFoundComponent }
     ])
   ],
-  providers: [ LectureService, ArticleService ],
+  providers: [ LectureService, ArticleService, LoadingService ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

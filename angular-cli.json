@@ -18,13 +18,12 @@
         "prefix": "app",
         "mobile": false,
         "styles": [
-            "styles/styles.scss",
-            "../node_modules/pace-progress/themes/white/pace-theme-flash.css"
+            "styles/styles.scss"
         ],
         "scripts": [
             "../node_modules/jquery/dist/jquery.js",
             "../node_modules/materialize-css/dist/js/materialize.js",
-            "../node_modules/pace-progress/pace.min.js"
+            "../node_modules/nprogress/nprogress.js"
         ],
         "environments": {
             "source": "environments/environment.ts",

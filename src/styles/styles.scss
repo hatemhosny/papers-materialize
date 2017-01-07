@@ -1,13 +1,17 @@
 // Custom Materialize Variables
 @import "materialize_variables";
+//
 // Materialize
 @import "materialize/materialize.scss";
+//
+// NProgress
+// $nprogress-color: darken($secondary-color, 20%);
+$nprogress-color: color("red", "darken-3");
+//
+//
+@import "nprogress.scss";
 body {
     background-color: color("grey", "lighten-3");
-}
-
-.card {
-    //margin: 0;
 }
 
 .btn-play {
