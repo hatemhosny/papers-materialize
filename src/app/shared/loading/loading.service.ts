@@ -8,7 +8,7 @@ export class LoadingService {
   constructor() { }
 
   start() {
-    // NProgress.configure({ showSpinner: false });
+    // NProgress.configure({ showSpinner: true, trickleSpeed: 100 });
     NProgress.start();
   }
 
