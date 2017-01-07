@@ -46,6 +46,6 @@ Run `npm run docs` to build the app documentation using compodoc. Run `npm run d
 
 ## Further help
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.19-3.
+This is an [Angular 2](https://github.com/angular/angular) project (version 2.3.1), and was generated with [angular-cli](https://github.com/angular/angular-cli) (version 1.0.0-beta.24).
 
 To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

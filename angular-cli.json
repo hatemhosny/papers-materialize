@@ -1,7 +1,7 @@
 {
     "project": {
-        "version": "1.0.0-beta.19-3",
-        "name": "ng2-material"
+        "version": "1.0.0-beta.24",
+        "name": "papers-fm"
     },
     "apps": [{
         "root": "src",
@@ -18,12 +18,12 @@
         "prefix": "app",
         "mobile": false,
         "styles": [
-            "styles/styles.scss",
-            "../node_modules/angular2-busy/build/style/busy.css"
+            "styles/styles.scss"
         ],
         "scripts": [
             "../node_modules/jquery/dist/jquery.js",
-            "../node_modules/materialize-css/dist/js/materialize.js"
+            "../node_modules/materialize-css/dist/js/materialize.js",
+            "../node_modules/nprogress/nprogress.js"
         ],
         "environments": {
             "source": "environments/environment.ts",

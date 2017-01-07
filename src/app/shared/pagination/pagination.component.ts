@@ -1,4 +1,4 @@
-import { Component,Input, Output, EventEmitter, OnInit, OnDestroy } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 
@@ -10,6 +10,7 @@ import { Subscription } from 'rxjs';
 export class PaginationComponent implements OnInit, OnDestroy {
 
   private subscription: Subscription;
+  p;
 
   @Input() id: string;
   @Output() pageChanged: EventEmitter<any> = new EventEmitter();

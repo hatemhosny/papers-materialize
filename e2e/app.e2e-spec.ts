@@ -1,10 +1,10 @@
-import { Ng2MaterialPage } from './app.po';
+import { Angular241Page } from './app.po';
 
-describe('ng2-material App', function() {
-  let page: Ng2MaterialPage;
+describe('angular241 App', function() {
+  let page: Angular241Page;
 
   beforeEach(() => {
-    page = new Ng2MaterialPage();
+    page = new Angular241Page();
   });
 
   it('should display message saying app works', () => {
