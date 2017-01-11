@@ -1,6 +1,6 @@
 <div class="card medium">
     <div>
-        <span class="article-item-title block-ellipsis-3 grey-text text-darken-4 grey lighten-2">{{item.title}}</span>
+        <a [routerLink]="['./' + item.pmid]"><span class="article-item-title block-ellipsis-3 grey-text text-darken-4 grey lighten-2">{{item.title}}</span></a>
         <a class="btn-play-medium"><i class="material-icons">play_arrow</i></a>
     </div>
     <div class="card-content">

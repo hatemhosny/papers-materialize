@@ -9,6 +9,10 @@ dev:
         local: release/
         remote: public_html/
 #    branch: [master, develop]
+    include:
+        "dist/*.html": "/"
+        "dist/*.js": "/"
+        "dist/*.css": "/"
 
 stag:
     scheme: ftp
