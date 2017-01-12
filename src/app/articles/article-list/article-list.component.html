@@ -7,8 +7,5 @@
             <app-article-item [item]="item"></app-article-item>
         </div>
     </div>
-
-    <div class="loading-error" *ngIf="errorMessage">There was an error during loading. Please try again later.</div>
-
     <app-pagination [id]="'article-pagination'" [(pageQuery)]="pageQuery" (pageChanged)="loadArticles($event)"></app-pagination>
 </div>

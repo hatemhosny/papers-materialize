@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NotificationService } from '../../../shared/notification/notification.service';
 
 @Component({
   selector: 'app-playlist',
@@ -14,10 +15,24 @@ export class PlaylistComponent implements OnInit {
         animation: 150
   };
 
-  constructor() { }
+  constructor(private notification: NotificationService) { }
 
   ngOnInit() {
   }
 
-
+  savePlaylist() {
+    this.notification.message('Playlist saved!');
+  }
+  successPlaylist() {
+    this.notification.success('Playlist saved!');
+  }
+  infoPlaylist() {
+    this.notification.info('Playlist saved!');
+  }
+  warningPlaylist() {
+    this.notification.warning('Playlist saved!');
+  }
+  errorPlaylist() {
+    this.notification.error('Playlist saved!');
+  }
 }

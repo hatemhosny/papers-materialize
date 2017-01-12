@@ -73,3 +73,23 @@ body {
     height: 13.5rem;
     -webkit-line-clamp: 9;
 }
+
+.success {
+    @extend .teal;
+    @extend .accent-3;
+}
+
+.info {
+    @extend .blue;
+    @extend .lighten-2;
+}
+
+.warning {
+    @extend .orange;
+    @extend .lighten-2;
+}
+
+.error {
+    @extend .red;
+    @extend .lighten-1;
+}

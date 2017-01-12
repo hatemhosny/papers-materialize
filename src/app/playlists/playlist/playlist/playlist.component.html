@@ -14,7 +14,11 @@
             </div>
         </li>
     </ul>
-
+    <button class="btn waves" (click)="savePlaylist()">Save</button>
+    <button class="btn waves success" (click)="successPlaylist()">Success</button>
+    <button class="btn waves info" (click)="infoPlaylist()">Info</button>
+    <button class="btn waves warning" (click)="warningPlaylist()">Warning</button>
+    <button class="btn waves error" (click)="errorPlaylist()">Error</button>
     <h2>See the result</h2>
     <div>
         <div *ngFor="let item of items">{{ item }}</div>

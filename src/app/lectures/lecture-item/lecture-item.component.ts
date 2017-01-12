@@ -1,7 +1,5 @@
 import { Component, OnInit, AfterViewInit, Input } from '@angular/core';
 
-declare var $: any;
-
 @Component({
   selector: 'app-lecture-item',
   templateUrl: './lecture-item.component.html',
