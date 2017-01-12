@@ -1,7 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 
-declare var $: any;
-
 @Component({
   selector: 'app-article-details',
   templateUrl: './article-details.component.html',

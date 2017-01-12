@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BookmarksModule } from './bookmarks/bookmarks.module';
 import { LoadingService } from './shared/loading/loading.service';
+import { NotificationService } from './shared/notification/notification.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { LoadingService } from './shared/loading/loading.service';
      { path: '**', component: PageNotFoundComponent }
     ])
   ],
-  providers: [ LectureService, ArticleService, LoadingService ],
+  providers: [ LectureService, ArticleService, LoadingService, NotificationService ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
