@@ -1,0 +1,22 @@
+<div class="container">
+
+    <ul class="collection with-header">
+        <li class="collection-header">
+            <h4>My Playlist</h4>
+        </li>
+    </ul>
+    <ul class="collection with-header" [sortablejs]="items" [sortablejsOptions]="sortablejsOptions">
+        <li class="collection-item" *ngFor="let item of items">
+            <div>
+                <span class="drag-handle">☰</span>
+                <span class="paper-title">paper #{{ item }}</span>
+                <a href="#!" class="secondary-content"><i class="material-icons">play_circle_filled</i></a>
+            </div>
+        </li>
+    </ul>
+
+    <h2>See the result</h2>
+    <div>
+        <div *ngFor="let item of items">{{ item }}</div>
+    </div>
+</div>

@@ -10,6 +10,7 @@ import { LectureModule } from './lectures/lecture.module';
 import { LectureService } from './lectures/lecture.service';
 import { ArticleModule } from './articles/article.module';
 import { ArticleService } from './articles/article.service';
+import { PlaylistsModule } from './playlists/playlists.module';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BookmarksModule } from './bookmarks/bookmarks.module';
@@ -28,6 +29,7 @@ import { LoadingService } from './shared/loading/loading.service';
     LayoutModule,
     LectureModule,
     ArticleModule,
+    PlaylistsModule,
     BookmarksModule,
     RouterModule.forRoot([
      { path: 'home', component: HomeComponent },
