@@ -1,6 +1,8 @@
+import { ArticleModule } from './../article.module';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 import { LoadingService } from './../../shared/loading/loading.service';
+import { NotificationService } from '../../shared/notification/notification.service';
 import { ArticleService } from './../article.service';
 import { IArticle } from '../article.model';
 
@@ -19,7 +21,12 @@ export class ArticleListComponent implements OnInit, AfterViewInit {
   totalItems: number;
   pageQuery: number;
 
-  constructor(private articleService: ArticleService, private loadingService: LoadingService) { }
+  constructor(
+    private articleService: ArticleService,
+    private loadingService: LoadingService,
+    private notification: NotificationService,
+    ) { }
+
 
   ngOnInit(): void {
     this.itemsPerPage = this.articleService.getNumberOfArticlesPerPage();
@@ -47,8 +54,8 @@ export class ArticleListComponent implements OnInit, AfterViewInit {
       },
       error => {
         this.loadingService.done();
-
-        this.errorMessage = <any>error;  // TODO log error
+        this.notification.error('An error occurred during loading!');
+        //this.errorMessage = <any>error;  // TODO log error
       }
     );
   }

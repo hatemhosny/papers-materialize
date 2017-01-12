@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Injectable()
 export class LoadingService {
 
-  constructor() { }
+    constructor() {}
 
   start() {
     // NProgress.configure({ showSpinner: true, trickleSpeed: 100 });
