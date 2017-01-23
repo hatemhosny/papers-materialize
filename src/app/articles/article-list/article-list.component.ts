@@ -55,7 +55,7 @@ export class ArticleListComponent implements OnInit, AfterViewInit {
       error => {
         this.loadingService.done();
         this.notification.error('An error occurred during loading!');
-        //this.errorMessage = <any>error;  // TODO log error
+        // this.errorMessage = <any>error;  // TODO log error
       }
     );
   }
