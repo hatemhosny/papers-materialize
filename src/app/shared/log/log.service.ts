@@ -75,10 +75,14 @@ export class LogService implements ErrorHandler {
       }
     }
 
+    // Raven additional data
     let options = {
       level: notificationType,
       tags: {
         client: environment.client
+      },
+      extra: {
+        message: message
       }
     };
 
