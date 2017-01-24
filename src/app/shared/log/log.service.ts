@@ -57,11 +57,12 @@ export class LogService implements ErrorHandler {
  */
   private log(error: any, stopLoading = false, notify = false, notificationType: LogLevel = 'info', message = ''): void {
 
-
+    // stop progress loading
     if (stopLoading) {
       this.loadingService.done();
     }
 
+    // show notification message
     if (notify && message) {
       switch (notificationType) {
         case 'error':
