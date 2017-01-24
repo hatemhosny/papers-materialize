@@ -1,11 +1,10 @@
 import { ArticleModule } from './../article.module';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 
+import { LogService } from './../../shared/log/log.service';
 import { LoadingService } from './../../shared/loading/loading.service';
-import { NotificationService } from '../../shared/notification/notification.service';
 import { ArticleService } from './../article.service';
 import { IArticle } from '../article.model';
-
 
 @Component({
   templateUrl: './article-list.component.html',
@@ -19,12 +18,12 @@ export class ArticleListComponent implements OnInit, AfterViewInit {
   currentPage: number = 1;
   itemsPerPage: number;
   totalItems: number;
-  pageQuery: number;
+  pageQuery: number = 1;
 
   constructor(
     private articleService: ArticleService,
     private loadingService: LoadingService,
-    private notification: NotificationService,
+    private logService: LogService
     ) { }
 
 
@@ -53,9 +52,7 @@ export class ArticleListComponent implements OnInit, AfterViewInit {
         window.scrollTo(0, 0);  // TODO smooth scroll
       },
       error => {
-        this.loadingService.done();
-        this.notification.error('An error occurred during loading!');
-        // this.errorMessage = <any>error;  // TODO log error
+        this.logService.logError(error, 'Loading error! Network connection failed.');
       }
     );
   }

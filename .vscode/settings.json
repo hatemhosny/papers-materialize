@@ -1,0 +1,16 @@
+{
+    "typescript.tsdk": "./node_modules/typescript/lib",
+    "editor.fontSize": 14,
+    "editor.wrappingColumn": 0,
+    "window.zoomLevel": 2,
+    "files.associations": {
+        "*.html.ts": "html",
+        "*.html": "html"
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.DS_Store": true,
+        "node_modules/": true
+    }
+}

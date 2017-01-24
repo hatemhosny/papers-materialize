@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Router } from '@angular/router';
@@ -16,6 +16,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { BookmarksModule } from './bookmarks/bookmarks.module';
 import { LoadingService } from './shared/loading/loading.service';
 import { NotificationService } from './shared/notification/notification.service';
+import { LogService } from './shared/log/log.service';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +40,14 @@ import { NotificationService } from './shared/notification/notification.service'
      { path: '**', component: PageNotFoundComponent }
     ])
   ],
-  providers: [ LectureService, ArticleService, LoadingService, NotificationService ],
+  providers: [
+    LectureService,
+    ArticleService,
+    LoadingService,
+    NotificationService,
+    LogService,
+    { provide: ErrorHandler, useExisting: LogService }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

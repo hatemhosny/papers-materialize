@@ -12,12 +12,13 @@ dploy.yaml
 /bower_components
 
 # IDEs and editors
+#/.vscode
 /.idea
-/.vscode
 .project
 .classpath
 *.launch
 .settings/
+/out
 
 # misc
 /.sass-cache
