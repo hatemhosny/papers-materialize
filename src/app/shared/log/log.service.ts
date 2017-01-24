@@ -15,9 +15,11 @@ export class LogService implements ErrorHandler {
 
   constructor(private loadingService: LoadingService, private notification: NotificationService) { }
 
-  // unhandeled exceptions before angular loads should be caught by Raven.config().install() in index.html
-
-  // this is used for unhandeled exceptions caught by angular
+/**
+ * This method handles unhandeled exceptions caught by angular.
+ * Exceptions thrown before angular loads should be caught by Raven.config().install() in index.html
+ * For custom error handling use logError()
+ */
   handleError(error: any): void {
     try {
       this.log(error, true, true, 'error', this.defaultErrorMessage);
@@ -27,21 +29,32 @@ export class LogService implements ErrorHandler {
     }
   }
 
-  // use this to handle exceptions
+/**
+ * This method should be used to handle exceptions
+ */
   logError(error: any, message = this.defaultErrorMessage): void {
     this.log(error, true, true, 'error', message);
   }
 
-  // use this to log +/- notify warnings
+/**
+ * Log +/- notify warning
+ */
   logWarning(message: string, notify = false): void {
     this.log(null, false, notify, 'warning', message);
   }
 
-  // use this to log +/- notify message
+/**
+ * Log +/- notify message
+ */
   logMessage(message: string, notify = false): void {
     this.log(null, false, notify, 'info', message);
   }
 
+/**
+ * The actual implementation of logging,
+ * in development environment, it logs to console
+ * otherwise, it sends logs to server
+ */
   private log(error: any, stopLoading = false, notify = false, notificationType: LogLevel = 'info', message = ''): void {
 
 
