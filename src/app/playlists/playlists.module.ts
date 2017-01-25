@@ -9,8 +9,8 @@ import { PlaylistComponent } from './playlist/playlist/playlist.component';
   imports: [
     SharedModule,
     RouterModule.forChild([
-     { path: 'playlists', component: PlaylistsComponent },
-     { path: 'playlists/:id', component: PlaylistComponent }
+     { path: '', component: PlaylistsComponent },
+     { path: ':id', component: PlaylistComponent }
     ])
   ],
   declarations: [PlaylistsComponent, PlaylistComponent]

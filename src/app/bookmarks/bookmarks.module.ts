@@ -8,7 +8,7 @@ import { BookmarksComponent } from './bookmarks.component';
   imports: [
     CommonModule,
     RouterModule.forChild([
-     { path: 'bookmarks', component: BookmarksComponent }
+     { path: '', component: BookmarksComponent }
     ])
   ],
   declarations: [
