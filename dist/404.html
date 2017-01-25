@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ng2Material</title>
+    <base href="/">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            background-color: #eeeeee;
+        }
+        
+        #loading {
+            width: 100%;
+            position: absolute;
+            top: calc(50% - 50px);
+            text-align: center;
+        }
+        
+        #loading-text {
+            color: #1e88e5;
+            font-size: 1rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        #loading-indicator {
+            position: relative;
+            left: calc(50% - 25px);
+            width: 50px;
+            height: 10px;
+            margin-bottom: 35px;
+        }
+        
+        #loading-indicator span {
+            display: block;
+            bottom: 0px;
+            width: 9px;
+            height: 5px;
+            background: #9b59b6;
+            position: absolute;
+            animation: loading-indicator 1.5s infinite ease-in-out;
+        }
+        
+        #loading-indicator span:nth-child(2) {
+            left: 11px;
+            animation-delay: .2s;
+        }
+        
+        #loading-indicator span:nth-child(3) {
+            left: 22px;
+            animation-delay: .4s;
+        }
+        
+        #loading-indicator span:nth-child(4) {
+            left: 33px;
+            animation-delay: .6s;
+        }
+        
+        #loading-indicator span:nth-child(5) {
+            left: 44px;
+            animation-delay: .8s;
+        }
+        
+        @keyframes loading-indicator {
+            0% {
+                height: 5px;
+                transform: translateY(0px);
+                background: #9b59b6;
+            }
+            25% {
+                height: 30px;
+                transform: translateY(15px);
+                background: #3498db;
+            }
+            50% {
+                height: 5px;
+                transform: translateY(0px);
+                background: #9b59b6;
+            }
+            100% {
+                height: 5px;
+                transform: translateY(0px);
+                background: #9b59b6;
+            }
+        }
+    </style>
+    <script src="assets/scripts/raven.3.9.1.min.js"></script>
+    <script>
+        Raven.config('https://b0b42e0ba30a42a5a2b64dcc98c8abd1@sentry.io/128931').install();
+    </script>
+<link href="styles.7c119aeddff2329a3d64.bundle.css" rel="stylesheet"></head>
+
+<body>
+    <app-root>
+        <div id="loading">
+            <div id="loading-indicator">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div id="loading-text">Loading the voice of medical literature...</div>
+        </div>
+    </app-root>
+<script type="text/javascript" src="inline.c888bf7b6a1d8f1280fb.bundle.js"></script><script type="text/javascript" src="scripts.9e240a0563435e32f9f2.bundle.js"></script><script type="text/javascript" src="vendor.d6047f4db75cf312f1d1.bundle.js"></script><script type="text/javascript" src="main.555b5c1ad2e06df8b76e.bundle.js"></script></body>
+
+</html>
