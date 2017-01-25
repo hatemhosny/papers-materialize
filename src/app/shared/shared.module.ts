@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Ng2PaginationModule } from 'ng2-pagination';
@@ -27,6 +27,9 @@ import { PaginationComponent } from './pagination/pagination.component';
     PaginationComponent,
     Ng2PaginationModule,
     SortablejsModule
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ]
 })
 export class SharedModule { }

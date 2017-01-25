@@ -1,8 +1,9 @@
 import { ArticleModule } from './../article.module';
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 
 import { LogService } from './../../shared/log/log.service';
 import { LoadingService } from './../../shared/loading/loading.service';
+import { PaginationComponent } from './../../shared/pagination/pagination.component';
 import { ArticleService } from './../article.service';
 import { IArticle } from '../article.model';
 
@@ -18,7 +19,8 @@ export class ArticleListComponent implements OnInit, AfterViewInit {
   currentPage: number = 1;
   itemsPerPage: number;
   totalItems: number;
-  pageQuery: number = 1;
+
+  @ViewChild('pagination') pagination: PaginationComponent;
 
   constructor(
     private articleService: ArticleService,
@@ -32,7 +34,7 @@ export class ArticleListComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.loadArticles(this.pageQuery);
+    this.loadArticles(this.pagination.pageQuery);
   }
 
   loadArticles(page: number) {
@@ -48,7 +50,7 @@ export class ArticleListComponent implements OnInit, AfterViewInit {
         this.loadingService.done();
 
         this.errorMessage = null;
-        this.pageQuery = page;
+        this.pagination.pageQuery = page;
         window.scrollTo(0, 0);  // TODO smooth scroll
       },
       error => {
