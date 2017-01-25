@@ -7,5 +7,5 @@
             <app-article-item [item]="item"></app-article-item>
         </div>
     </div>
-    <app-pagination [id]="'article-pagination'" *ngIf="items?.length>0" [(pageQuery)]="pageQuery" (pageChanged)="loadArticles($event)"></app-pagination>
+    <app-pagination #pagination [id]="'article-pagination'" [hidden]="!(items?.length>0)" (pageChanged)="loadArticles($event)"></app-pagination>
 </div>

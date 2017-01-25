@@ -13,12 +13,10 @@ export class PaginationComponent implements OnInit, OnDestroy {
   p;
 
   @Input() id: string;
-  @Output() pageChanged: EventEmitter<any> = new EventEmitter();
+  @Output() pageChanged = new EventEmitter<number>();
 
   private currentPage: number = 1;
-  @Output() pageQueryChange: EventEmitter<any> = new EventEmitter();
 
-  @Input()
   // get QueryString('page') to allow deep linking
   get pageQuery(): number {
     let page = this.currentPage;
@@ -31,7 +29,6 @@ export class PaginationComponent implements OnInit, OnDestroy {
         }
       }
     );
-    this.pageQueryChange.emit(page);
     return page;
   }
 
@@ -60,7 +57,7 @@ export class PaginationComponent implements OnInit, OnDestroy {
     this.currentPage = this.pageQuery;
   }
 
-    ngOnDestroy() {
+  ngOnDestroy() {
     // prevent memory leak by unsubscribing
     this.subscription.unsubscribe();
   }
